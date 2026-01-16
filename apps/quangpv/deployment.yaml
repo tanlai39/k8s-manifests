@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quangpv-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: quangpv
+  template:
+    metadata:
+      labels:
+        app: quangpv
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
