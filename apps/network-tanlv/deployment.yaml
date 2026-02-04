@@ -1,1 +1,21 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: network-tanlv-web
+  labels:
+    app: network-tanlv-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: network-tanlv-web
+  template:
+    metadata:
+      labels:
+        app: network-tanlv-web
+    spec:
+      containers:
+      - name: network-tanlv-web
+        image: nginx:latest
+        ports:
+        - containerPort: 80
