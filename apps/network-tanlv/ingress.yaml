@@ -8,7 +8,7 @@ spec:
   tls:
   - hosts:
       - network.tanlv.io.vn
-    secretName: tls-tanlv-io-vn
+    secretName: tls-network-tanlv-io-vn
   ingressClassName: nginx
   rules:
   - host: network.tanlv.io.vn
